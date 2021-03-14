@@ -1,0 +1,71 @@
+<html>
+<head>
+ <title>Calculator</title>
+ <style type="text/css">
+  .tombol{ 
+   background-color: rgb(255, 0, 200); 
+  } /* membuat tabel dengan property warna pada background pink*/
+  .tabel{
+   background-color: rgb(43, 255, 0);
+   margin: 10px;
+   padding: 10px;
+  }
+  /*membuat tabel dengan property warna background hijau , margin 10px dan padding 10px*/
+ </style>
+</head>
+<body>
+ <form name="calculator"> <!---->
+  
+  <table style="background-color: " class="tabel"> <!-- membuat tabel-->
+   <caption>Calculator</caption>
+   <tr>
+    <td>Bilangan 1</td><td>:</td><td><input type="number" name="bil1"></td> <!-- membuat baris pada tabel yang berisikan teks bil 1 dengan 
+        bil 2 input type number-->
+   </tr>
+   <tr>
+    <td>Bilangan 2</td><td>:</td><td><input type="number" name="bil2"></td> <!-- membuat baris pada tabel yang berisikan teks bil 1 dengan 
+        bil 2 input type number-->
+   </tr>
+   <tr>
+    <td>Hasil</td><td>:</td><td><input type="text" name="hasil"></td> <!-- membuat baris pada tabel yang berisikan teks bil 1 dengan 
+        bil 2 input type number-->
+   </tr>
+   <tr>
+    <td colspan="3" align="center">
+     <input class="tombol" type="button" onclick="tambah()" value="+"> <!-- membuat button + -->
+     <input class="tombol" type="button" onclick="kurang()" value="-"> <!-- membuat button - -->
+     <input class="tombol" type="button" onclick="kali()" value="*"> <!-- membuat button x -->
+     <input class="tombol" type="button" onclick="bagi()" value="/"> <!-- membuat button / -->
+    </td>
+   </tr>
+  </table>
+ </form>
+
+</body>
+</html>
+<script type="text/javascript">
+function tambah(){
+ var bil1=parseFloat(document.calculator.bil1.value); // membuat variabel bil1 yang menyimpan nilai dari input type text bil1
+ var bil2=parseFloat(document.calculator.bil2.value); // membuat variabel bil2 yang menyimpan nilai dari input type text bil2
+ var hasil= bil1+bil2; // membuat variabel hasil yang menyimpan nilai hasil penambahan bil1 dan bil2 
+ document.calculator.hasil.value=hasil; // print hasil sama dengan nilai variabel hasil
+}
+function kurang(){
+ var bil1=parseFloat(document.calculator.bil1.value); // membuat variabel bil1 yang menyimpan nilai dari input type text bil1
+ var bil2=parseFloat(document.calculator.bil2.value); // membuat variabel bil2 yang menyimpan nilai dari input type text bil2
+ var hasil= bil1-bil2; // membuat variabel hasil yang menyimpan nilai hasil pengurangan bil1 dan bil2 
+ document.calculator.hasil.value=hasil; // print hasil sama dengan nilai variabel hasil
+}
+function kali(){
+ var bil1=parseFloat(document.calculator.bil1.value); // membuat variabel bil1 yang menyimpan nilai dari input type text bil1
+ var bil2=parseFloat(document.calculator.bil2.value); // membuat variabel bil2 yang menyimpan nilai dari input type text bil2
+ var hasil= bil1*bil2; // membuat variabel hasil yang menyimpan nilai hasil perkalian bil1 dan bil2 
+ document.calculator.hasil.value=hasil; // print hasil sama dengan nilai variabel hasil
+}
+function bagi(){
+ var bil1=parseFloat(document.calculator.bil1.value); // membuat variabel bil1 yang menyimpan nilai dari input type text bil1
+ var bil2=parseFloat(document.calculator.bil2.value); // membuat variabel bil2 yang menyimpan nilai dari input type text bil2
+ var hasil= bil1/bil2; // membuat variabel hasil yang menyimpan nilai hasil pembagian bil1 dan bil2 
+ document.calculator.hasil.value=hasil; // print hasil sama dengan nilai variabel hasil
+}
+</script>
